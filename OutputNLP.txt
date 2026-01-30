@@ -1,0 +1,127 @@
+Skill Summary:
+[
+  {
+    "skill": "python",
+    "count": 33
+  },
+  {
+    "skill": "machine learning",
+    "count": 29
+  },
+  {
+    "skill": "sql",
+    "count": 18
+  },
+  {
+    "skill": "aws",
+    "count": 16
+  },
+  {
+    "skill": "java",
+    "count": 16
+  },
+  {
+    "skill": "llm",
+    "count": 15
+  },
+  {
+    "skill": "rag",
+    "count": 14
+  },
+  {
+    "skill": "algorithms",
+    "count": 13
+  },
+  {
+    "skill": "data science",
+    "count": 13
+  },
+  {
+    "skill": "pytorch",
+    "count": 11
+  },
+  {
+    "skill": "javascript",
+    "count": 9
+  },
+  {
+    "skill": "genai",
+    "count": 8
+  },
+  {
+    "skill": "tensorflow",
+    "count": 8
+  },
+  {
+    "skill": "statistics",
+    "count": 8
+  },
+  {
+    "skill": "data structures",
+    "count": 7
+  },
+  {
+    "skill": "django",
+    "count": 7
+  },
+  {
+    "skill": "computer vision",
+    "count": 7
+  },
+  {
+    "skill": "deep learning",
+    "count": 7
+  },
+  {
+    "skill": "prompt engineering",
+    "count": 6
+  },
+  {
+    "skill": "kubernetes",
+    "count": 6
+  },
+  {
+    "skill": "docker",
+    "count": 6
+  },
+  {
+    "skill": "langchain",
+    "count": 5
+  },
+  {
+    "skill": "mlops",
+    "count": 5
+  },
+  {
+    "skill": "ci/cd",
+    "count": 5
+  },
+  {
+    "skill": "nlp",
+    "count": 5
+  },
+  {
+    "skill": "system design",
+    "count": 4
+  },
+  {
+    "skill": "fastapi",
+    "count": 3
+  },
+  {
+    "skill": "microservices",
+    "count": 3
+  },
+  {
+    "skill": "fine-tuning",
+    "count": 3
+  },
+  {
+    "skill": "huggingface",
+    "count": 1
+  },
+  {
+    "skill": "llmops",
+    "count": 1
+  }
+]
