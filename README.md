@@ -9,103 +9,99 @@ An automated system that analyzes job descriptions from placement cell emails to
 
 ## 💡 Motivation
 
-Students often rely on guesswork or anecdotal advice when deciding which technical skills to prioritize. This project replaces guesswork with **data-driven insights** extracted from actual job descriptions shared by my college's placement cell, providing a realistic view of industry demands.
+Students often rely on guesswork when deciding which technical skills to prioritize. This project replaces guesswork with **data-driven insights** extracted from actual job descriptions shared by my college's placement cell.
 
 ## 🎯 What This Does
 
-- **Automated Email Ingestion** - Fetches job-related emails programmatically via Gmail API
+- **Automated Email Ingestion** - Fetches job-related emails via Gmail API
 - **Content Extraction** - Parses job descriptions from email bodies and linked documents
-- **Text Normalization** - Cleans and standardizes unstructured job posting data
 - **Skill Identification** - Deterministically extracts technical skills using rule-based NLP
 - **Demand Analysis** - Aggregates skill frequencies across multiple job roles
 - **AI-Powered Insights** - Uses LLM to synthesize learning priorities and recommendations
 
-## 🔄 Pipeline Overview
+## 🔄 Pipeline
 ```
-College Placement Emails (Gmail)
-    ↓
-Email Ingestion (Gmail API)
-    ↓
-HTML & Document Parsing (BeautifulSoup, Google Docs API)
-    ↓
-Text Cleaning & Normalization
-    ↓
-Skill Extraction (Rule-based NLP)
-    ↓
-Frequency Aggregation
-    ↓
-LLM-Based Synthesis (Insights & Recommendations)
-    ↓
-Actionable Learning Roadmap
+Gmail (Placement Emails) → Parse & Clean → NLP Extraction → 
+Frequency Analysis → LLM Synthesis → Learning Roadmap
 ```
 
 ## 📊 Example Insights
 
-Based on analysis of placement cell job postings:
+From analysis of placement cell job postings:
 
-- **Foundational Skills**: Python, Machine Learning, SQL, and AWS emerge as must-haves
-- **Emerging Demand**: GenAI skills (LLMs, RAG, prompt engineering) show strong growth
-- **Industry Differentiators**: Production skills (Docker, CI/CD, monitoring) separate job-ready candidates
-- **Domain-Specific**: Data engineering roles prioritize Spark and ETL pipelines
+- **Foundational**: Python, Machine Learning, SQL, AWS
+- **Emerging**: GenAI (LLMs, RAG, fine-tuning), HuggingFace
+- **Production**: Docker, CI/CD, Microservices
+- **Specialized**: Spark, ETL, LLMOps
+
+## 📁 Output Files
+
+- **`OutputNLP.json`** - Raw skill frequencies from rule-based extraction
+- **`OutputLLM.json`** - Synthesized insights and learning recommendations from AI analysis
+
+Sample from `OutputNLP.json`:
+```json
+{
+  "skill": "microservices",
+  "count": 3
+},
+{
+  "skill": "fine-tuning",
+  "count": 3
+}
+```
 
 ## 🛠️ Tech Stack
 
-**Data Collection**
-- Gmail API - Automated email retrieval
-- Google Docs API - Document content extraction
+**Data Collection**: Gmail API, Google Docs API  
+**Processing**: Python, BeautifulSoup, Rule-based NLP  
+**Analysis**: Pandas, Large Language Models (token-efficient synthesis)
 
-**Processing**
-- Python 3.x - Core language
-- BeautifulSoup - HTML parsing
-- Deterministic NLP - Rule-based skill matching
-
-**Analysis**
-- Pandas - Data aggregation
-- Large Language Models - Insight synthesis (token-efficient usage)
-
-## 🚀 Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
 - Python 3.8+
 - Gmail API credentials
 - Google Cloud project with APIs enabled
 
-The script will:
-1. Authenticate with Gmail
-2. Fetch placement cell emails
-3. Extract and parse job descriptions
-4. Analyze skill frequencies
-5. Generate prioritized recommendations
+### Usage
+```bash
+pip install -r requirements.txt
+python analyzer.py
+```
+
+Output files generated:
+- `OutputNLP.json` - Skill frequency data
+- `OutputLLM.json` - AI-generated insights
 
 ## 📈 Why This Matters
 
-This project demonstrates:
-
-✅ **End-to-End System Thinking** - Complete pipeline from data collection to insights  
-✅ **Real-World Data Handling** - Working with messy, unstructured job postings  
-✅ **Hybrid AI Design** - Combining rule-based extraction with LLM synthesis  
-✅ **Token Efficiency** - Strategic LLM usage only where needed  
-✅ **Automation-Ready** - Scalable architecture for continuous monitoring  
+✅ **End-to-end pipeline** from data collection to insights  
+✅ **Real-world data** from actual campus recruitment  
+✅ **Hybrid design** combining rule-based + LLM approaches  
+✅ **Token-efficient** AI usage  
+✅ **Automation-ready** for continuous monitoring
 
 ## 🎓 Data Source
 
-This project uses **real job descriptions from my college's placement cell emails**, providing authentic insights into what companies are actually looking for when recruiting on campus. This makes the analysis directly relevant to current students and recent graduates.
+Uses **real job descriptions from my college's placement cell emails**, providing authentic insights into what companies actually seek when recruiting on campus.
 
-## 🚧 Future Enhancements
+## 🚧 Future Work
 
-- [ ] **Monthly Automation** - Scheduled analysis of new job postings
-- [ ] **Trend Analysis** - Track skill demand changes over time
-- [ ] **Interactive Dashboard** - Visualize skill frequencies and trends
-- [ ] **Skill Gap Analysis** - Compare personal skills against market demand
-- [ ] **Role-Specific Insights** - Separate analysis for SDE, Data Science, DevOps roles
-- [ ] **Salary Correlation** - Link skills to compensation data
+- [ ] Monthly automated analysis
+- [ ] Trend tracking over time
+- [ ] Interactive visualization dashboard
+- [ ] Personal skill gap analysis
+- [ ] Role-specific breakdowns (SDE, Data Science, DevOps)
 
-## 🔐 Privacy & Ethics
+## 🔐 Privacy
 
-- Only analyzes publicly shared job descriptions from placement emails
-- No personal candidate data is stored or processed
-- Email credentials remain local and are never shared
+- Only analyzes publicly shared job descriptions
+- No personal candidate data stored
+- Credentials remain local
 
-💼 **Built with real placement data to help students make data-driven career decisions**
+---
 
-⭐ If this project helped you identify skills to learn, consider giving it a star!
+💼 **Built with real placement data to help students make informed career decisions**
+
+⭐ If this helped you identify skills to learn, consider giving it a star!
