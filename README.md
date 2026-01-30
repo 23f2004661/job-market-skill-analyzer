@@ -57,18 +57,6 @@ Sample from `OutputNLP.json`:
 **Processing**: Python, BeautifulSoup, Rule-based NLP  
 **Analysis**: Pandas, Large Language Models (token-efficient synthesis)
 
-## 🚀 Quick Start
-
-### Prerequisites
-- Python 3.8+
-- Gmail API credentials
-- Google Cloud project with APIs enabled
-
-### Usage
-```bash
-pip install -r requirements.txt
-python analyzer.py
-```
 
 Output files generated:
 - `OutputNLP.json` - Skill frequency data
