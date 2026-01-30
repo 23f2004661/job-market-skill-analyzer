@@ -70,24 +70,6 @@ Based on analysis of placement cell job postings:
 - Gmail API credentials
 - Google Cloud project with APIs enabled
 
-### Installation
-```bash
-# Clone repository
-git clone <your-repo-url>
-cd job-market-analyzer
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Configure Gmail API
-# Place your credentials.json in the project root
-```
-
-### Usage
-```bash
-python analyzer.py
-```
-
 The script will:
 1. Authenticate with Gmail
 2. Fetch placement cell emails
